@@ -1,55 +1,31 @@
-# User Profile API
+Postman Collecion
 
-### This project provides a REST API for managing user profiles with CRUD (Create, Read, Update, Delete) functionalities.
+[Ailaysa - Tasks.postman_collection.json](https://github.com/adhilabu/user_crud/files/14628682/Ailaysa.-.Tasks.postman_collection.json)
 
-This repository contains Django REST framework API views for managing user profiles.
+# TASKS - 
 
-
-## Create User Profile
-
-- **URL:** `http://localhost:8000/user/`
-- **Method:** POST
-- **Request Body (JSON):**
-  ```json
-  {
-      "name": "User 1",
-      "email": "user1@example.com",
-      "profile_picture": "https://example.com/profile.jpg"
-  }
-  ```
-
-## Fetch User Profiles
-
-- **URL:** `http://localhost:8000/user/profiles/?page=1&page_size=1`
-- **Method:** GET
-
-### Parameters
-- `page`: Specifies the page number of results to retrieve. In this URL, `page=1` indicates that the first page of results is being requested.
-- `page_size`: Specifies the number of items per page. Here, `page_size=1` indicates that only one item should be included per page.
-
-## Fetch User Profile by ID
-Use this endpoint to fetch a user profile by its ID.
-- **URL:** `http://localhost:8000/profiles/{id}/`
-- **Method:** GET
-Replace {id} with the ID of the user profile you want to fetch.
-
-## Update User Profile by id
-Use this endpoint to update a user profile by its ID.
-- **URL:** `http://localhost:8000/profiles/{id}/`
-- **Method:** PUT
-- **Request Body (JSON):**
-  ```json
-  {
-      "name": "User 1",
-      "email": "user1@example.com",
-      "profile_picture": "https://example.com/profile.jpg"
-  }
-  ```
-Replace {id} with the ID of the user profile you want to update.
-
-## Delete User Profile
-Use this endpoint to delete a user profile by its ID.
-
-- **URL:** `http://localhost:8000/profiles/{id}/`
-- **Method:** DELETE
-Replace {id} with the ID of the user profile you want to delete.
+## Task 1:
+- Create a Rest API where users can create, view, update and delete their profile
+information (e.g., name, email, profile picture).
+- Add pagination and search functionality and ordering for name field in the API.
+## Task 2:
+- Generate a sentence and then display it in the browser in real-time(stream). Use
+HTTP streaming response in Django. You can use basic HTML to show the results.
+## Task 3:
+Suppose you're building a web application where users can upload files for processing.
+You've decided to use Celery to handle the file processing tasks asynchronously.
+- Design a Celery task that takes a file path as input, reads the content of the file,
+counts the number of words in it, and returns the word count.
+## Task 4:
+- Create any category and subcategory list and show response using a nested
+serializer.
+## Task 5:
+Suppose we have 2 tables namely PostModel with fields title, author, created_at and
+CommentModel with the fields post, comments, publication_date.
+Create Rest API for following tasks,
+A. List all the posts with comments for each post in serializer
+B. Filter all posts if title is None
+C. List the posts based on recent comments
+D. List the posts based on created_at
+E. Delete the posts if all the comments in that post are deleted.
+F. Calculate total number of comments in each post and include it in PostSerializer
