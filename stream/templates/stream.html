@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Streaming Sentence</title>
+</head>
+<body>
+  <h1>Building a sentence...</h1>
+  <p id="sentence"></p>
+  <script>
+    const sentenceElement = document.getElementById("sentence");
+    const source = new EventSource("/stream_sentence/");
+    source.onmessage = function(event) {
+      sentenceElement.textContent += event.data;
+    };
+  </script>
+</body>
+</html>

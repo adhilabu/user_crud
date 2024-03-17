@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from user import urls as user_urls
+from stream import urls as stream_urls
+from file import urls as file_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', include(user_urls, namespace='user')),
+    path('file/', include(file_urls, namespace='file')),
+    path('stream/', include(stream_urls, namespace='stream')),
 ]

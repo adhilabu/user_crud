@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user',
+    'stream',
+    'file',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +124,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Celery Broker URL (Redis connection URL)
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+
+# Optional: Celery Result Backend (Redis for storing task results)
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+
+# Configure Celery
+CELERY_TIMEZONE = 'UTC'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
