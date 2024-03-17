@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'user',
     'stream',
     'file',
+    'category',
 ]
 
 MIDDLEWARE = [
