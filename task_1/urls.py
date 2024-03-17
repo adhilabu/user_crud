@@ -20,6 +20,7 @@ from user import urls as user_urls
 from stream import urls as stream_urls
 from file import urls as file_urls
 from category import urls as category_urls
+from post import urls as post_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +28,5 @@ urlpatterns = [
     path('stream/', include(stream_urls, namespace='stream')),
     path('file/', include(file_urls, namespace='file')),
     path('category/', include(category_urls, namespace='category')),
+    path('post/', include(post_urls, namespace='post')),
 ]

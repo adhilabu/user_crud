@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'stream',
     'file',
     'category',
+    'post',
 ]
 
 MIDDLEWARE = [
